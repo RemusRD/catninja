@@ -1,0 +1,26 @@
+openapi: "3.0.0"
+info:
+  title: Cat ninja api provider
+  description: Provides random facts throught it's REST API
+  version: 2.0.0
+paths:
+  /fact:
+    get:
+      operationId: getFact
+      summary: get random cat fact
+      responses:
+        '200':
+          description: |-
+            200 response
+          content:
+            application/json:
+              examples:
+                foo:
+                  value:
+                    {
+                      "versions":
+                        {
+                          "fact": "Cats are beautiful",
+                          "length": 18
+                        }
+                    }
